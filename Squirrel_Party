@@ -44,7 +44,7 @@ int main()
 
     // If überprüft, ob der Fall 1 = wahr oder 0 = falsch ist und gibt entsprechend das printf raus
 
-    if(squirrel_party(Zigarren_geraucht,Day) == 1){
+    if(squirrel_party(Zigarren_geraucht,Day)){
         printf("Die Party war ein Erfolg!\n");
     } else {
         printf("Die Party war kein Erfolg\n");
