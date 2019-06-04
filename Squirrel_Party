@@ -39,7 +39,8 @@ int main()
 
     printf("m = Montag\nd = Dienstag\nM = Mittwoch\nD = Donnerstag\nf = Freitag\ns = Samstag\nS = Sonntag\n");
     printf("An welchem Tag war die Party?\n");
-    scanf("%c",&Day);                            // <----- Programm bricht hier ab, warum?
+    fflush(stdin);
+    scanf("%c",&Day);                           
 
     // If überprüft, ob der Fall 1 = wahr oder 0 = falsch ist und gibt entsprechend das printf raus
 
