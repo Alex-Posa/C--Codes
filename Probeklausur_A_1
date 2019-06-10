@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+void zeichnen(double* Array, int length){
+    int Zeilen;
+    int Spalten;
+
+    for(Zeilen = 0; Zeilen < 19; Zeilen++){
+        printf("|\n");
+    }                                                   <--- Fehlt: Zeichen der Kurse // WIP
+    for(Spalten = 0; Spalten < length; Spalten++){
+        if(Spalten == 0){
+            printf("+-");
+        }
+        printf("+------");
+    }
+    printf("\n");
+}
+
+double kurs_durchschnitt(double* Array, int length){
+
+    int i;
+    double Summe;
+    double Median;
+
+    for(i = 0; i < length; i++){
+        Summe = Summe + Array[i];
+    }
+
+    return Median = Summe/length;
+}
+
+ int main()
+ {
+    double k[] = { 120., 150., 80., 14., 110., 65., 99., 180., 140., 55. };
+    zeichnen(k, 10);
+
+
+
+    printf("Der Durchschnittswert der Kurse betraegt: %.2lf\n",kurs_durchschnitt(k,10));
+
+    return 0;
+}
