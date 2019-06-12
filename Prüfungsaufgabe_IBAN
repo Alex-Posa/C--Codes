@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+char pruefziffer(char alt[]){
+
+    int i;
+    int Summe = 0;
+    int Ziffer;
+
+    for(i=0; alt[i] != '\0';i++){
+        Summe = Summe + alt[i];
+    }
+     Ziffer = Summe%11;
+
+     /*if(Ziffer == 10){
+        Ziffer = 'X';
+     }*/
+
+  return Ziffer;
+}
+
+
+void generiere_iban(char alt[], char neu[]){
+
+    neu[0] = 'D';
+    neu[1] = 'E';
+    neu[2] = pruefziffer(alt);
+
+
+}
+
+
+int main(void) {
+
+    char iban[14];
+    char alte_ktonr[] = "67892";
+    printf("Alt : %s\n", alte_ktonr); // Ausgabe "Alt : 67892"
+    generiere_iban(alte_ktonr, iban); // Aufruf Ihrer Methode
+    printf("IBAN: %s\n", iban); // Ausgabe "IBAN: DEX0000067892"
+
+
+}
