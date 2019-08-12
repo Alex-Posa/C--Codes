@@ -1,3 +1,3 @@
-# PG_Zusatz
+# C - Programming
 
-Revisiting programming 1 tasks.
+C applications 
