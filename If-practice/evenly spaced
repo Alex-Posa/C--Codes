@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int is_evenly_spaced(int a, int b, int c){
+
+ if((a - b == b - c) || (a - c == c - b) || (a - b == c - a)){
+    return 1;
+ } else return 0;
+
+ return 0;
+}
+
+int main()
+{
+   int a = 3;
+   int b = 6;
+   int c = 9;
+
+   if(is_evenly_spaced(a,b,c)){
+    printf("Wahr\n");
+   } else {
+    printf("Falsch\n");
+   }
+    return 0;
+}
