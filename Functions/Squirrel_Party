@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int squirrel_party(short Zigs, char Tag){
+
+    char fun;
+
+    switch(Tag){
+        case 'm':
+        case 'd':
+        case 'M':
+        case 'D':
+        case 'f':
+            if (Zigs < 40 || Zigs > 60){
+                fun = 0;
+            } else fun = 1;
+            break;
+
+        case 's':
+        case 'S':
+            if (Zigs >= 40){
+                fun = 1;
+            } else fun = 0;
+            break;
+    }
+
+    return fun;
+}
+
+
+int main()
+{
+    short Zigarren_geraucht;
+    char Day;
+
+    //short's datentyp wird als %hi gezeigt
+
+    printf("Eingabe der gerauchten Zigarren: ");
+    scanf("%hi",&Zigarren_geraucht);
+
+    printf("m = Montag\nd = Dienstag\nM = Mittwoch\nD = Donnerstag\nf = Freitag\ns = Samstag\nS = Sonntag\n");
+    printf("An welchem Tag war die Party?\n");
+    fflush(stdin);
+    scanf("%c",&Day);                           
+
+    // If überprüft, ob der Fall 1 = wahr oder 0 = falsch ist und gibt entsprechend das printf raus
+
+    if(squirrel_party(Zigarren_geraucht,Day)){
+        printf("Die Party war ein Erfolg!\n");
+    } else {
+        printf("Die Party war kein Erfolg\n");
+    }
+
+    return 0;
+}
