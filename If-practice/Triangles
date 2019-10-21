@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c;
+
+    //User input for the lengths of a side on a triangle
+
+    printf("Please enter a number for a: ");
+    scanf("%d",&a);
+
+    printf("Please enter a number for b: ");
+    scanf("%d",&b);
+
+    printf("Please enter a number for c: ");
+    scanf("%d",&c);
+
+
+
+    // if cascade to declare what type of triangle it is
+
+    if(a == b && a == c && b == c){
+        printf("Gleichseitiges Dreieck");
+    }
+
+    if((a==b || b==c) && (c != a || b) ){
+        printf("Gleichschenkliges Dreieck");
+    }
+
+    if(a + b == c || a + c == b || b + c == a){
+        printf("Rechtwinkliges Dreieck");
+    }
+
+
+    return 0;
+}
