@@ -1,0 +1,9 @@
+all: test
+	gcc main.c *.o -o main // -> *.o compile all files
+
+test: charbuffer.o
+	gcc test.c *.o -o unittests
+	./unittests
+
+
+
