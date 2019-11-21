@@ -1,0 +1,40 @@
+#ifndef _CHARBUFFER_H
+#define _CHARBUFFER_H
+
+#ifndef SUCCESS
+#define SUCCESS 0
+#endif
+
+#define CHARBUFFER_ERR_NULLPTR 101
+#define CHARBUFFER_ERR_REALLOC_FAILED 102
+
+typedef struct {
+	char* content;
+	int content_size; // Größe des reservierten Speicherbereichs
+	int content_len;  // Anzahl der enthaltenen sichtbaren Zeichen
+} CharBuffer;
+
+/*
+ * Neuen CharBuffer auf dem Heap reservieren
+ * @param initial_size: initiale Größe von content
+ */
+CharBuffer* charbuffer_new(int initial_size);
+
+/*
+ * Ein Zeichen an den CharBuffer anfügen
+ * @param buf: Zeiger auf CharBuffer
+ * @param c: Anzufügendes Zeichen
+ */
+int charbuffer_append(CharBuffer* buf, char c);
+
+/*
+ * Inhalt des CharBuffers auf Console ausgeben
+ */
+void charbuffer_print(CharBuffer* buf);
+
+/*
+ * Reservierten Speicher des Charbuffers freigeben
+ */
+void charbuffer_free(CharBuffer* buf);
+
+#endif
