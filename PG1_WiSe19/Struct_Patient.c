@@ -40,19 +40,18 @@ void inAndOut(int einleseMenge){
     }while(i < einleseMenge);
 
     int temp = 0;
-
     for(j=0; j<einleseMenge; j++){
-    printf("\n\tPatient Nummer: %d\n", temp = temp+1);
-    printf("\n\tName: %s\n\tVorname: %s\n\tStrasse: %s\n\tPLZ: %d\n\tOrt: %s\n", pt[j].name, pt[j].vorname, pt[j].strasse, pt[j].plz, pt[j].ort);
-  }
-    
-//TODO: sortier funktion
+    printf("\n||\tPatient Nummer: %d\n", temp = temp+1);
+    printf("||\n||\tName: %s\n||\tVorname: %s\n||\tStrasse: %s\n||\tPLZ: %d\n||\tOrt: %s\n", pt[j].name, pt[j].vorname, pt[j].strasse, pt[j].plz, pt[j].ort);
+    }
 
 }
 
+
+
 int main()
 {
-    inAndOut(4);
+    inAndOut(1);
 
 
     return 0;
