@@ -12,7 +12,7 @@ typedef struct{
     char ort[ARR_LEN];
 
 }patient;
-
+//sizeof patient = 208(int)
 
 
 int main()
@@ -40,9 +40,14 @@ int main()
     i++;
   } while(i < 2);
 
+  int temp = 0;
+
   for(j=0; j<2; j++){
+    printf("\n\tPatient Nummer: %d\n", temp = temp+1);
     printf("\n\tName: %s\n\tVorname: %s\n\tStrasse: %s\n\tPLZ: %d\n\tOrt: %s\n", pt[j].name, pt[j].vorname, pt[j].strasse, pt[j].plz, pt[j].ort);
   }
+
+
 
 
     return 0;
