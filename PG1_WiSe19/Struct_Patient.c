@@ -15,14 +15,13 @@ typedef struct{
 //sizeof patient = 208(int)
 
 
-int main()
-{
+void inAndOut(int einleseMenge){
     int i = 0, j;
-    patient pt[4];
+    patient pt[einleseMenge];
 
     printf("Bitte die Patientendaten eingeben.\n\n");
 
-  do{
+    do{
 
     printf("\nName des Patienten: ");
     scanf("%s", pt[i].name);
@@ -38,16 +37,22 @@ int main()
 
 
     i++;
-  } while(i < 2);
+    }while(i < einleseMenge);
 
-  int temp = 0;
+    int temp = 0;
 
-  for(j=0; j<2; j++){
+    for(j=0; j<einleseMenge; j++){
     printf("\n\tPatient Nummer: %d\n", temp = temp+1);
     printf("\n\tName: %s\n\tVorname: %s\n\tStrasse: %s\n\tPLZ: %d\n\tOrt: %s\n", pt[j].name, pt[j].vorname, pt[j].strasse, pt[j].plz, pt[j].ort);
   }
+    
+//TODO: sortier funktion
 
+}
 
+int main()
+{
+    inAndOut(4);
 
 
     return 0;
